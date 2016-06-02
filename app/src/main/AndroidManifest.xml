@@ -8,7 +8,28 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Accueil">
+        <activity
+            android:name=".Events"
+            android:label="@string/title_activity_events"
+            android:parentActivityName=".Main"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="niameyzze.apkode.net.niameyzze.Main" />
+        </activity>
+        <activity
+            android:name=".Shop"
+            android:label="@string/title_activity_shop"
+            android:parentActivityName=".Main"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="niameyzze.apkode.net.niameyzze.Main" />
+        </activity>
+        <activity
+            android:name=".Main"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="niameyzze.apkode.net.niameyzze.Main"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:padding="@dimen/activity_horizontal_margin"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Niamey Connecté"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event"
+            android:onClick="startEvenement"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="@dimen/btnMain"/>
+        <Button
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mangas"
+            android:onClick="startBandeDessinée"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="32dp"
+            android:layout_marginBottom="@dimen/btnMain"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shop"
+            android:onClick="startEvenement"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="48dp"
+            android:layout_marginBottom="@dimen/btnMain"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
