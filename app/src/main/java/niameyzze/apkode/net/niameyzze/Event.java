@@ -8,8 +8,6 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
-
 import niameyzze.apkode.net.niameyzze.evenement.EvenementObject;
 
 public class Event extends AppCompatActivity {
@@ -44,11 +42,11 @@ public class Event extends AppCompatActivity {
         assert txtPresentation != null;
         txtPresentation.setText(evenementObject.getPresentation());
 
-        Picasso.with(this)
+        /*Picasso.with(this)
                 .load(evenementObject.getImage())
                 .fit().centerCrop()
                 .into(imageView);
-
+*/
 
         setSupportActionBar(toolbar);
 
