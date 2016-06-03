@@ -5,113 +5,118 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="niameyzze.apkode.net.niameyzze.Event"
+    tools:context=".activity.EventActivity"
     tools:showIn="@layout/activity_event">
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:orientation="vertical"
-      android:background="@color/transparent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:orientation="vertical">
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@android:color/white"
-          android:padding="@dimen/activity_horizontal_margin"
-          android:layout_marginBottom="@dimen/activity_horizontal_margin"
-          android:orientation="vertical">
-          <TextView
-              android:gravity="center"
-              android:id="@+id/txtTitre"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:textColor="@android:color/black"
-              android:textStyle="bold"
-              android:textSize="18sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
 
-      </LinearLayout>
+            <TextView
+                android:id="@+id/txtTitre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@android:color/white"
-          android:padding="@dimen/activity_horizontal_margin"
-          android:layout_marginBottom="@dimen/activity_horizontal_margin"
-          android:orientation="vertical">
-          <TextView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Lieu"
-              android:textColor="@android:color/black"/>
+        </LinearLayout>
 
-          <TextView
-              android:id="@+id/txtLieu"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
 
-      </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lieu"
+                android:textColor="@android:color/black" />
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@android:color/white"
-          android:padding="@dimen/activity_horizontal_margin"
-          android:layout_marginBottom="@dimen/activity_horizontal_margin"
-          android:orientation="vertical">
-          <TextView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Date"
-              android:textColor="@android:color/black"/>
+            <TextView
+                android:id="@+id/txtLieu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-          <TextView
-              android:id="@+id/txtHoraire"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"/>
+        </LinearLayout>
 
-      </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@android:color/white"
-          android:padding="@dimen/activity_horizontal_margin"
-          android:layout_marginBottom="@dimen/activity_horizontal_margin"
-          android:orientation="vertical">
-          <TextView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Tarif"
-              android:textColor="@android:color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="@android:color/black" />
 
-          <TextView
-              android:id="@+id/txtTarif"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txtHoraire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-      </LinearLayout>
+        </LinearLayout>
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@android:color/white"
-          android:padding="@dimen/activity_horizontal_margin"
-          android:layout_marginBottom="@dimen/activity_horizontal_margin"
-          android:orientation="vertical">
-          <TextView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Détail"
-              android:textColor="@android:color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
 
-          <TextView
-              android:id="@+id/txtPresentation"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tarif"
+                android:textColor="@android:color/black" />
 
-      </LinearLayout>
+            <TextView
+                android:id="@+id/txtTarif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-  </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Détail"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/txtPresentation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>

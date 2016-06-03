@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="niameyzze.apkode.net.niameyzze.Event">
+    tools:context=".activity.EventActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -23,10 +23,10 @@
             app:layout_scrollFlags="exitUntilCollapsed">
 
             <ImageView
-                android:contentDescription="@string/imageEvenementDescription"
                 android:id="@+id/main.backdrop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="@string/imageEvenementDescription"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax" />

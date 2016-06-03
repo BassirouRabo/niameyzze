@@ -6,9 +6,6 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 
-/**
- * Created by brabo on 6/3/16.
- */
 class SquareLayout extends RelativeLayout {
 
     public SquareLayout(Context context) {

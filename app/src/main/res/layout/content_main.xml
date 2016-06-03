@@ -5,44 +5,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="niameyzze.apkode.net.niameyzze.Main"
-    tools:showIn="@layout/activity_main">
+    tools:context=".activity.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@mipmap/bg3">
 
 
     <LinearLayout
+        android:padding="@dimen/activity_micro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Event"
+            android:drawableTop="@mipmap/ic_event"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:onClick="startEvenements"
+            android:text="Event"
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
-            android:layout_marginLeft="16dp"
-            android:layout_marginBottom="@dimen/btnMain"/>
-        <Button
+            android:layout_margin="@dimen/activity_mini"
+            android:paddingTop="@dimen/activity_mini"
+            android:paddingBottom="@dimen/activity_mini"/>
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Mangas"
-            android:onClick="startMangas"
-            android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"
-            android:layout_marginLeft="32dp"
-            android:layout_marginBottom="@dimen/btnMain"/>
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Shop"
-            android:onClick="startShops"
+            android:drawableTop="@mipmap/ic_manga"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@color/colorPrimary"
+            android:onClick="startMangas"
+            android:text="Mangas"
             android:textColor="@android:color/white"
-            android:layout_marginLeft="48dp"
-            android:layout_marginBottom="@dimen/btnMain"/>
+            android:layout_margin="@dimen/activity_mini"
+            android:paddingTop="@dimen/activity_mini"
+            android:paddingBottom="@dimen/activity_mini"/>
+
+        <Button
+            android:drawableTop="@mipmap/ic_shop"
+            android:padding="@dimen/activity_micro"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:onClick="startShops"
+            android:text="Shop"
+            android:textColor="@android:color/white"
+            android:layout_margin="@dimen/activity_mini"
+            android:paddingTop="@dimen/activity_mini"
+            android:paddingBottom="@dimen/activity_mini"/>
 
     </LinearLayout>
 
