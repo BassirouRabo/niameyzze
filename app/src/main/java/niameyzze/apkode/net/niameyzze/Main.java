@@ -19,7 +19,15 @@ public class Main extends AppCompatActivity {
     }
 
 
-    public void startEvenement(View view) {
+    public void startEvenements(View view) {
         startActivity(new Intent(this, Events.class));
+    }
+
+    public void startMangas(View view) {
+        startActivity(new Intent(this, Mangas.class));
+    }
+
+    public void startShops(View view) {
+        startActivity(new Intent(this, Shop.class));
     }
 }

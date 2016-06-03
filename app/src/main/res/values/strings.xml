@@ -98,4 +98,8 @@
     <string name="ic_share">Share</string>
     <string name="imageEvenementDescription">Image</string>
     <string name="icon_description">Icon</string>
+    <string name="title_activity_mangas">Bande dessinée</string>
+    <string name="imageManga">Manga</string>
+    <string name="title_activity_manga">Manga</string>
+    <string name="imageShop">Shop</string>
 </resources>

@@ -46,6 +46,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="niameyzze.apkode.net.niameyzze.Events" />
         </activity>
+        <activity
+            android:name=".Mangas"
+            android:label="@string/title_activity_mangas"
+            android:parentActivityName=".Main"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="niameyzze.apkode.net.niameyzze.Main" />
+        </activity>
     </application>
 
 </manifest>
