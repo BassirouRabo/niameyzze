@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -23,8 +24,8 @@ import java.util.ArrayList;
 
 import niameyzze.apkode.net.niameyzze.R;
 import niameyzze.apkode.net.niameyzze.adapter.ShopAdapter;
-import niameyzze.apkode.net.niameyzze.helper.AppController;
 import niameyzze.apkode.net.niameyzze.fragment.ShopSlideshow;
+import niameyzze.apkode.net.niameyzze.helper.AppController;
 import niameyzze.apkode.net.niameyzze.model.Shop;
 
 public class ShopsActivity extends AppCompatActivity {
@@ -81,15 +82,15 @@ public class ShopsActivity extends AppCompatActivity {
 
     private void fetchImages() {
 
-        pDialog.setMessage("Downloading json...");
-        pDialog.show();
+        final TextView txtLoadingShop = (TextView) findViewById(R.id.txtLoadingShop);
 
         JsonArrayRequest req = new JsonArrayRequest(endpoint,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
                         Log.d(TAG, response.toString());
-                        pDialog.hide();
+                        assert txtLoadingShop != null;
+                        txtLoadingShop.setVisibility(View.GONE);
 
                         shops.clear();
                         for (int i = 0; i < response.length(); i++) {
@@ -117,7 +118,8 @@ public class ShopsActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Error: " + error.getMessage());
-                pDialog.hide();
+                assert txtLoadingShop != null;
+                txtLoadingShop.setText("Erreur réseau");
             }
         });
 

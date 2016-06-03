@@ -1,6 +1,5 @@
 package niameyzze.apkode.net.niameyzze.activity;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -23,8 +23,8 @@ import java.util.ArrayList;
 
 import niameyzze.apkode.net.niameyzze.R;
 import niameyzze.apkode.net.niameyzze.adapter.MangaAdapter;
-import niameyzze.apkode.net.niameyzze.helper.AppController;
 import niameyzze.apkode.net.niameyzze.fragment.MangaSlideshow;
+import niameyzze.apkode.net.niameyzze.helper.AppController;
 import niameyzze.apkode.net.niameyzze.model.Manga;
 
 public class MangasActivity extends AppCompatActivity {
@@ -32,7 +32,6 @@ public class MangasActivity extends AppCompatActivity {
     private static final String endpoint = "http://api.androidhive.info/json/glide.json";
     private String TAG = MangasActivity.class.getSimpleName();
     private ArrayList<Manga> mangas;
-    private ProgressDialog pDialog;
     private MangaAdapter mangaAdapter;
     private RecyclerView recyclerView;
 
@@ -47,7 +46,6 @@ public class MangasActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
-        pDialog = new ProgressDialog(this);
         mangas = new ArrayList<>();
         mangaAdapter = new MangaAdapter(this, mangas);
 
@@ -80,16 +78,15 @@ public class MangasActivity extends AppCompatActivity {
     }
 
     private void fetchImages() {
-
-        pDialog.setMessage("Downloading json...");
-        pDialog.show();
+        final TextView txtLoadingManga = (TextView) findViewById(R.id.txtLoadingManga);
 
         JsonArrayRequest req = new JsonArrayRequest(endpoint,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
                         Log.d(TAG, response.toString());
-                        pDialog.hide();
+                        assert txtLoadingManga != null;
+                        txtLoadingManga.setVisibility(View.GONE);
 
                         mangas.clear();
                         for (int i = 0; i < response.length(); i++) {
@@ -117,7 +114,8 @@ public class MangasActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Error: " + error.getMessage());
-                pDialog.hide();
+                assert txtLoadingManga != null;
+                txtLoadingManga.setVisibility(View.GONE);
             }
         });
 

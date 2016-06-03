@@ -40,6 +40,7 @@ public class MangaAdapter extends RecyclerView.Adapter<MangaHolder> {
         Glide.with(mContext).load(manga.getMedium())
                 .thumbnail(0.5f)
                 .crossFade()
+                .placeholder(R.color.grey300)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(mangaHolder.thumbnail);
     }

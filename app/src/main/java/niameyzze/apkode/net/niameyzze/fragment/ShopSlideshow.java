@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +27,7 @@ public class ShopSlideshow extends DialogFragment {
     private ArrayList<Shop> shops;
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
-    private TextView lblCount, lblTitle, lblDate;
+    private TextView lblCount;
     //	page change listener
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 
@@ -47,6 +46,8 @@ public class ShopSlideshow extends DialogFragment {
 
         }
     };
+    private TextView lblTitle;
+    private TextView lblDate;
     private int selectedPosition = 0;
 
     public static ShopSlideshow newInstance() {
@@ -60,8 +61,8 @@ public class ShopSlideshow extends DialogFragment {
         View v = inflater.inflate(R.layout.fragment_shops, container, false);
         viewPager = (ViewPager) v.findViewById(R.id.viewpager);
         lblCount = (TextView) v.findViewById(R.id.lbl_count);
-        lblTitle = (TextView) v.findViewById(R.id.title);
-        lblDate = (TextView) v.findViewById(R.id.date);
+        // lblTitle = (TextView) v.findViewById(R.id.title);
+        // lblDate = (TextView) v.findViewById(R.id.date);
 
         shops = (ArrayList<Shop>) getArguments().getSerializable("shops");
         selectedPosition = getArguments().getInt("position");
@@ -84,8 +85,8 @@ public class ShopSlideshow extends DialogFragment {
         lblCount.setText((position + 1) + " of " + shops.size());
 
         Shop shop = shops.get(position);
-        lblTitle.setText(shop.getName());
-        lblDate.setText(shop.getTimestamp());
+        // lblTitle.setText(shop.getName());
+        // lblDate.setText(shop.getTimestamp());
     }
 
     @Override
